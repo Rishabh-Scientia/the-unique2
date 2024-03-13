@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question1</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    .main{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .leftcontan{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height:400px;;
+        width: 400px;
+        background:transparent;
+        box-shadow: 5px 5px 5px rgb(36, 36, 36);
+        border-radius: 50px;
+        border: solid black 2px;
+
+    }
+    .para1{
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 30px;
+        color: rgb(0, 0, 0);
+    }
+    .input2::placeholder{
+        color: rgb(247, 245, 245);
+    }
+    #textfeed{
+        height: 150px;
+        width: 250px;
+        border-radius: 5px;
+        padding: 8px;
+        font-family: 'Times New Roman', Times, serif ;
+        font-size: 20px;
+        font-weight: 600;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,0.19940476190476186) 0%, rgba(0,0,0,1) 100%);
+        color: white;
+        border: solid rgb(233, 222, 222) 2px;
+    }
+    .sendbut{
+        margin-top: 50px;
+        border: none;
+        border-radius: 50px;
+        width: 200px;
+        height: 40px;
+        background-color: black;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(243, 243, 243);
+    }
+    .sendbut:hover{
+        background-color: rgb(99, 249, 6);
+        cursor: pointer;
+
+    }
+    @media (max-width:400px) {
+        .leftcontan{
+            width:95%;
+            height: 80%;
+        }
+    }
+</style>
+<body>
+    <div class="main">
+        <form  action="https://api.web3forms.com/submit" method="POST"  class="leftcontan">
+            <p class="para1">Hey,<br>When you are returning back to college?</p>
+            <input type="hidden" name="access_key" value="6ed24859-1027-4ff5-9af0-23fc8b51ecac">
+            <textarea name="message" id="textfeed" placeholder="Write here..." class="input2"></textarea>
+            <button type="submit" class="sendbut">Send</button>
+        </form>
+    </div>
+    
+</body>
+</html>
